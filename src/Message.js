@@ -56,6 +56,7 @@ export default class Message extends React.Component {
       isSameUser: this.isSameUser,
       isSameDay: this.isSameDay,
     };
+    delete bubbleProps.containerStyle
     if (this.props.renderBubble) {
       return this.props.renderBubble(bubbleProps);
     }
@@ -68,7 +69,7 @@ export default class Message extends React.Component {
       isSameUser: this.isSameUser,
       isSameDay: this.isSameDay,
     };
-
+    delete avatarProps.containerStyle
     if(this.props.renderAvatar){
       return this.props.renderAvatar(avatarProps)
     }
