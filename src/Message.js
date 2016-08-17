@@ -41,6 +41,7 @@ export default class Message extends React.Component {
         isSameUser: this.isSameUser,
         isSameDay: this.isSameDay,
       };
+      delete dayProps.containerStyle
       if (this.props.renderDay) {
         return this.props.renderDay(dayProps);
       }
