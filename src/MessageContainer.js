@@ -136,6 +136,7 @@ export default class MessageContainer extends React.Component {
   }
 
   render() {
+    console.log('message container', this.props)
     return (
       <View ref='container' style={{flex:1}}>
         <ListView
@@ -146,11 +147,11 @@ export default class MessageContainer extends React.Component {
           pageSize={20}
 
           dataSource={this.state.dataSource}
-
           renderRow={this.renderRow}
           renderHeader={this.renderFooter}
           renderFooter={this.renderLoadEarlier}
           renderScrollComponent={this.renderScrollComponent}
+          {...this.props.listViewProps}
         />
       </View>
     );
