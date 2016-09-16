@@ -22,9 +22,9 @@ export default class MessageText extends React.Component {
 
   onPhonePress(phone) {
     const options = [
-      'Text',
-      'Call',
-      'Cancel',
+      '拨通电话',
+      '发送短信',
+      '取消',
     ];
     const cancelButtonIndex = options.length - 1;
     this.context.actionSheet().showActionSheetWithOptions({
