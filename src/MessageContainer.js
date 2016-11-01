@@ -126,23 +126,24 @@ export default class MessageContainer extends React.Component {
 
   renderScrollComponent(props) {
     const invertibleScrollViewProps = this.props.invertibleScrollViewProps;
+    console.log('invert')
     return (
       <InvertibleScrollView
         {...props}
         {...invertibleScrollViewProps}
+        keyboardShouldPersistTaps={false}
+        keyboardDismissMode={'on-drag'}
         ref={component => this._invertibleScrollViewRef = component}
       />
     );
   }
 
   render() {
-    console.log('message container', this.props)
     return (
       <View ref='container' style={{flex:1}}>
         <ListView
           enableEmptySections={true}
-          keyboardShouldPersistTaps={false}
-          keyboardDismissMode={'interactive'}
+
           automaticallyAdjustContentInsets={false}
           initialListSize={20}
           pageSize={20}
