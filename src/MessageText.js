@@ -3,6 +3,7 @@ import {
   Linking,
   StyleSheet,
   View,
+  Platform
 } from 'react-native';
 
 import ParsedText from 'react-native-parsed-text';
@@ -21,6 +22,10 @@ export default class MessageText extends React.Component {
   }
 
   onPhonePress(phone) {
+    if(Platform.OS === 'android'){
+      Communications.phonecall(phone, true)
+      return
+    }
     const options = [
       '拨通电话',
       '发送短信',
