@@ -111,7 +111,6 @@ export default class Bubble extends React.Component {
 const styles = {
   left: StyleSheet.create({
     container: {
-      flex: 1,
       alignItems: 'flex-start',
     },
     wrapper: {
@@ -130,7 +129,6 @@ const styles = {
   }),
   right: StyleSheet.create({
     container: {
-      flex: 1,
       alignItems: 'flex-end',
     },
     wrapper: {
